@@ -27,3 +27,4 @@ hs_err_pid*
 /product-service/.settings
 .project
 .classpath
+shopping-list-ui/node_modules
