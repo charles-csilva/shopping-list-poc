@@ -1,11 +1,13 @@
-package com.charlessilva.dtos;
+package com.charlessilva.models;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 
-@Builder
 @Getter
-public class ProductDTO {
+@Builder
+@Setter
+public class ShoppingListItem {
     private Long id;
     private String name;
     private Double price;

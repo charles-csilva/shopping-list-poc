@@ -3,9 +3,9 @@ package com.charlessilva.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.charlessilva.dtos.ProductDTO;
-import com.charlessilva.mappers.ProductMapper;
-import com.charlessilva.models.Product;
+import com.charlessilva.dtos.ShoppingListItemDTO;
+import com.charlessilva.mappers.ShoppingListItem;
+import com.charlessilva.models.ShoppingListItem;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,22 +19,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("products")
-public class ProductController {
+public class ShoppingListItemController {
 
-    private static List<Product> data = new ArrayList<Product>();
+    private static List<ShoppingListItem> data = new ArrayList<ShoppingListItem>();
 
     @GetMapping()
-	public List<ProductDTO> getAllProducts() {
-		return data.stream().map(p -> ProductMapper.toDTO(p)).toList();
+	public List<ShoppingListItemDTO> getAllProducts() {
+		return data.stream().map(p -> ShoppingListItem.toDTO(p)).toList();
 	}
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ProductDTO createNewProduct(@RequestBody ProductDTO dto) {
-        var product = ProductMapper.fromDTO(dto);
+    public ShoppingListItemDTO createNewProduct(@RequestBody ShoppingListItemDTO dto) {
+        var product = ShoppingListItem.fromDTO(dto);
         product.setId(System.currentTimeMillis());
         data.add(product);
-        return ProductMapper.toDTO(product);
+        return ShoppingListItem.toDTO(product);
     }
 
     @DeleteMapping("/{id}")
