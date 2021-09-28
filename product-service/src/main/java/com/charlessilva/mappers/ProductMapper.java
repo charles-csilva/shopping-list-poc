@@ -1,7 +1,7 @@
-package com.charlessilva.mapper;
+package com.charlessilva.mappers;
 
-import com.charlessilva.dto.ProductDTO;
-import com.charlessilva.model.Product;
+import com.charlessilva.dtos.ProductDTO;
+import com.charlessilva.models.Product;
 
 public class ProductMapper {
     public static ProductDTO toDTO(Product p) {
