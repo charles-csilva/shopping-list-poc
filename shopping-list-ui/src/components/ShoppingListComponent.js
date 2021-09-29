@@ -13,10 +13,11 @@ export const ShoppingListComponent = ({ data, isCompleteAction }) => {
 				<tbody>
 					{data.length === 0 && <p>(No Items)</p>}
 					{data.map(({ id, name, price }) => (
-						<tr>
+						<tr key={id}>
 							<td>
 								{`${name} - $${price}`}
 								<Button
+									className="btn-action"
 									variant="link"
 									onClick={() =>
 										isCompleteAction

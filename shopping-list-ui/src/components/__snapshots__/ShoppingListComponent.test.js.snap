@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShoppingListComponent must be properly rendered when data has values and action available is Delete 1`] = `
+<div
+  className="d-flex justify-content-center"
+>
+  <table
+    className="table table-bordered"
+  >
+    <tbody>
+      <tr>
+        <td>
+          p1 - $1.23
+          <button
+            className="btn-action btn btn-link"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span>
+              ❌
+            </span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ShoppingListComponent must be properly rendered when data has values and action available is Mark as Completed 1`] = `
+<div
+  className="d-flex justify-content-center"
+>
+  <table
+    className="table table-bordered"
+  >
+    <tbody>
+      <tr>
+        <td>
+          p1 - $1.23
+          <button
+            className="btn-action btn btn-link"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span>
+              ✅
+            </span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ShoppingListComponent must be properly rendered when data is an empty array 1`] = `
+<div
+  className="d-flex justify-content-center"
+>
+  <table
+    className="table table-bordered"
+  >
+    <tbody>
+      <p>
+        (No Items)
+      </p>
+    </tbody>
+  </table>
+</div>
+`;
