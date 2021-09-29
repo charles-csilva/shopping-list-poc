@@ -34,8 +34,12 @@ public class ShoppingItemRepositoryInMem implements ShoppingItemRepository {
 		return false;
 	}
 
-	public List<ShoppingItem> findAll() {
-		return records;
+	public List<ShoppingItem> findAllActive() {
+		return records.stream().filter(r -> r.getPurchaseTimestamp() == null).toList();
+	}
+
+	public List<ShoppingItem> findAllPurchased() {
+		return records.stream().filter(r -> r.getPurchaseTimestamp() != null).toList();
 	}
 
 	public Boolean updateTimestamp(Long id, LocalDateTime dt) {

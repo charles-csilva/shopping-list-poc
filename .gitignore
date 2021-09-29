@@ -23,8 +23,8 @@
 hs_err_pid*
 
 .vscode/
-/product-service/target
-/product-service/.settings
+/shopping-list-service/target
+/shopping-list-service/.settings
 .project
 .classpath
 shopping-list-ui/node_modules

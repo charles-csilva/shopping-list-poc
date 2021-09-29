@@ -9,6 +9,7 @@ public interface ShoppingItemRepository {
     ShoppingItem save(ShoppingItem item);
 	ShoppingItem findById(Long id);
 	Boolean delete(Long id);
-	List<ShoppingItem> findAll();
+	List<ShoppingItem> findAllActive();
+	List<ShoppingItem> findAllPurchased();
 	Boolean updateTimestamp(Long id, LocalDateTime dt);
 }

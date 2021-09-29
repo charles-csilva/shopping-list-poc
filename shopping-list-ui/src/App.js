@@ -1,9 +1,9 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { MainNav } from "./main-nav/MainNav";
-import { AuditPageComponent } from "./audit-page/AuditPageComponent";
-import { HomePageComponent } from "./home-page/HomePageComponent";
+import { MainNav } from "./components/MainNav";
+import { AuditPageComponent } from "./components/AuditPageComponent";
+import { HomePageComponent } from "./components/HomePageComponent";
 
 export default function App() {
   return (
