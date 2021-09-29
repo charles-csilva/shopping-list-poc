@@ -2,6 +2,7 @@ package com.charlessilva.repositories.inmem;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.charlessilva.models.ShoppingItem;
@@ -12,7 +13,13 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class ShoppingItemRepositoryInMem implements ShoppingItemRepository {
 
-	private static List<ShoppingItem> records = new ArrayList<ShoppingItem>();
+	//initial data
+	private static List<ShoppingItem> records = new ArrayList<ShoppingItem>(
+			Arrays.asList(
+					ShoppingItem.builder().id(1L).name("Product A").price(1.23).build(),
+					ShoppingItem.builder().id(2L).name("Product B").price(2.23).build(),
+					ShoppingItem.builder().id(3L).name("Product C").price(3.23).build()
+			));
 
 	public ShoppingItem save(ShoppingItem item) {
 		Long id = System.currentTimeMillis();
