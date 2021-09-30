@@ -1,0 +1,10 @@
+version: "3.1"
+services:
+  shopping-list-service:
+    build: ./shopping-list-service
+    ports: 
+      - 8080:8080
+  shopping-list-ui-service:
+    build: ./shopping-list-ui
+    ports: 
+      - 3000:3000
