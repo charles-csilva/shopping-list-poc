@@ -25,6 +25,7 @@ hs_err_pid*
 .vscode/
 /shopping-list-service/target
 /shopping-list-service/.settings
+/shopping-list-service/.idea
 .project
 .classpath
 shopping-list-ui/node_modules

@@ -7,7 +7,6 @@ import com.charlessilva.dtos.ShoppingItemDTO;
 import com.charlessilva.mappers.ShoppingListItemMapper;
 import com.charlessilva.repositories.ShoppingItemRepository;
 
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
