@@ -8,5 +8,5 @@ This is a proof of concept of a shopping list solution. It consists of a backend
 ```
 docker-compose up
 ```
-### Usage
+## Usage
 http://localhost:3000
